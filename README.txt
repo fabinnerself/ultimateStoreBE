@@ -28,7 +28,9 @@ npm install
 
 2. Asegúrate de tener MongoDB corriendo en `mongodb://localhost:27017` asimismo verificar que exista la base de datos tienda_db.
 
-3. Ejecutar en modo desarrollo:
+3. Copiar arhivo .env.template a .env, verificar que la base de datos de mongoDB sea la correcta
+
+4. Ejecutar en modo desarrollo:
 \`\`\`bash
 npm run dev
 \`\`\`
@@ -52,8 +54,6 @@ El sistema asegura integridad y consistencia en cada transacción, facilitando o
 | Clientes   | http://localhost:3000/api/clientes  |
 | Pedidos    | http://localhost:3000/api/pedidos   |
 | Productos  | http://localhost:3000/api/productos |
-
- 
 
 La documentación completa de los endpoints, ejemplos de uso y respuestas esperadas está disponible en Postman:  [Postman Documentation](https://documenter.getpostman.com/view/22674808/2sB34Zs4jL).
 
