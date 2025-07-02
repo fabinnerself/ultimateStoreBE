@@ -21,19 +21,29 @@ Backend para gestión de pedidos, clientes y productos usando las siguentes tecn
 
 ## 🛠️ Instalación
 
-1. Instalar dependencias:
-\`\`\`bash
+1. Clonar el proyecto
+```bash
+git clone https://github.com/fabinnerself/ultimateStoreBE.git
+```
+luego
+```bash
+cd ultimateStoreBE
+```
+2. Instalar dependencias:
+
+```bash
 npm install
-\`\`\`
+```
 
-2. Asegúrate de tener MongoDB corriendo en `mongodb://localhost:27017` asimismo verificar que exista la base de datos tienda_db.
+3. Asegúrate de tener MongoDB corriendo en `mongodb://localhost:27017` asimismo verificar que exista la base de datos tienda_db.
 
-3. Copiar arhivo .env.template a .env, verificar que la base de datos de mongoDB sea la correcta
+4. Copia el archivo .env.template a .env y verifica que la configuración de la base de datos MongoDB sea correcta
 
-4. Ejecutar en modo desarrollo:
-\`\`\`bash
+5. Ejecutar en modo desarrollo:
+```bash
 npm run dev
-\`\`\`
+```
+6. Con Postman u otra herramienta, ejecutar los endpoints
 
 ## 📘 Documentacion de la API 
 
