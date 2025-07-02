@@ -136,11 +136,6 @@ exports.actualizarPedido = async (req, res) => {
       pedido.total = total
     }
 
-    // Actualizar estado si se proporciona
-    if (estado) {
-      pedido.estado = estado
-    }
-
     await pedido.save()
     res.json(pedido)
   } catch (error) {
@@ -148,12 +143,33 @@ exports.actualizarPedido = async (req, res) => {
   }
 }
 
+
+// Cerrar pedido
+exports.cerrarPedido = async (req, res) => {
+  try {
+
+    const { productos, estado } = req.body
+    const pedido = await Pedido.findOne({ id: req.params.id })
+
+    if (!pedido) {
+      return res.status(404).json({ error: "Pedido no encontrado" })
+    } 
+
+    // Actualizar estado a cerrado    
+    pedido.estado = "Cerrado"    
+
+    await pedido.save()
+    res.json(pedido)
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}
+
+
 // Eliminar pedido
 exports.eliminarPedido = async (req, res) => {
   try {
-
-// Simula un error interno del servidor
-    throw new Error("Error 500 internal error para eliminar pedido");
+ 
 
     const pedido = await Pedido.findOneAndDelete({ id: req.params.id })
     if (!pedido) {

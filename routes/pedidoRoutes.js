@@ -17,4 +17,7 @@ router.put("/:id", pedidoController.actualizarPedido)
 // DELETE /api/pedidos/:id - Eliminar pedido
 router.delete("/:id", pedidoController.eliminarPedido)
 
+// CERRAR /api/pedidos/:id/cerrar - Cerrar pedido
+router.put("/:id/cerrar", pedidoController.cerrarPedido)
+
 module.exports = router

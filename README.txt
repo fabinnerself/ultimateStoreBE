@@ -95,6 +95,7 @@ Representa una solicitud de compra realizada por un cliente en la tienda. Contie
 - `POST /api/pedidos` - Crear nuevo pedido
 - `PUT /api/pedidos/:id` - Actualizar pedido
 - `DELETE /api/pedidos/:id` - Eliminar pedido
+- `PUT /api/pedidos/:id/cerrar` - Cerrar pedido
 
 ## 🧪 Ejemplos de uso
 
