@@ -63,6 +63,10 @@ const pedidoSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  tenantId: {
+    type: String,
+    required: true,
+  },
 })
 
 // Middleware para actualizar fecha_actualizacion y fecha_cerrado

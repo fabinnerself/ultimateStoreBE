@@ -1,12 +1,12 @@
 const Cliente = require("../models/Cliente")
+const { getTenantId } = require('../middlewares/tenantMiddleware');
 
 // Listar todos los clientes
 exports.listarClientes = async (req, res) => {
   try {
+    const tenantId = getTenantId(req);  
 
-  
-
-    const clientes = await Cliente.find().sort({ fecha_creacion: -1 })
+    const clientes = await Cliente.find({ tenantId }).sort({ fecha_creacion: -1 })
     res.json(clientes)
   } catch (error) {
     res.status(500).json({ error: error.message })
@@ -15,8 +15,7 @@ exports.listarClientes = async (req, res) => {
 
 // Obtener cliente por ID
 exports.obtenerCliente = async (req, res) => {
-  try {
- 
+  try { 
 
     const cliente = await Cliente.findOne({ id: req.params.id })
     if (!cliente) {
@@ -31,7 +30,9 @@ exports.obtenerCliente = async (req, res) => {
 // Crear nuevo cliente
 exports.crearCliente = async (req, res) => {
   try {
+    const tenantId = getTenantId(req); 
     const cliente = new Cliente(req.body)
+    cliente.tenantId = tenantId; 
     await cliente.save()
     res.status(201).json(cliente)
   } catch (error) {

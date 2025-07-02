@@ -1,11 +1,12 @@
 const Producto = require("../models/Producto")
+const { getTenantId } = require('../middlewares/tenantMiddleware');
 
 // Listar todos los productos
 exports.listarProductos = async (req, res) => {
   try {
- 
+    const tenantId = getTenantId(req);
 
-    const productos = await Producto.find().sort({ fecha_creacion: -1 })
+    const productos = await Producto.find({ tenantId }).sort({ fecha_creacion: -1 })
     res.json(productos)
   } catch (error) {
     res.status(500).json({ error: error.message })
@@ -29,7 +30,9 @@ exports.obtenerProducto = async (req, res) => {
 // Crear nuevo producto
 exports.crearProducto = async (req, res) => {
   try {
+    const tenantId = getTenantId(req);
     const producto = new Producto(req.body)
+    producto.tenantId = tenantId;
     await producto.save()
     res.status(201).json(producto)
   } catch (error) {

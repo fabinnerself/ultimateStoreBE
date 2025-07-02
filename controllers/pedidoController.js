@@ -1,12 +1,14 @@
 const Pedido = require("../models/Pedido")
 const Cliente = require("../models/Cliente")
 const Producto = require("../models/Producto")
+const { getTenantId } = require('../middlewares/tenantMiddleware');
 
 // Listar todos los pedidos con información del cliente
 exports.listarPedidos = async (req, res) => {
   try {
-    
-    const pedidos = await Pedido.find().sort({ fecha_creacion: -1 })
+    const tenantId = getTenantId(req);
+
+    const pedidos = await Pedido.find({ tenantId }).sort({ fecha_creacion: -1 })
 
     // Obtener información de clientes para cada pedido
     const pedidosConCliente = await Promise.all(
@@ -32,15 +34,13 @@ exports.listarPedidos = async (req, res) => {
 exports.obtenerPedido = async (req, res) => {
   try {
 
-    
-
-    const pedido = await Pedido.findOne({ id: req.params.id })
+    const pedido = await Pedido.findOne({ id: req.params.id, tenantId })
     if (!pedido) {
       return res.status(404).json({ error: "Pedido no encontrado" })
     }
 
     // Obtener información del cliente
-    const cliente = await Cliente.findOne({ id: pedido.cliente_id })
+    const cliente = await Cliente.findOne({ id: pedido.cliente_id, tenantId })
 
     res.json({
       ...pedido.toObject(),
@@ -54,7 +54,7 @@ exports.obtenerPedido = async (req, res) => {
 // Crear nuevo pedido
 exports.crearPedido = async (req, res) => {
   try {
-
+    const tenantId = getTenantId(req); 
 
     const { cliente_id, productos } = req.body
 
@@ -92,6 +92,7 @@ exports.crearPedido = async (req, res) => {
       total,
     })
 
+    pedido.tenantId = tenantId;
     await pedido.save()
     res.status(201).json(pedido)
   } catch (error) {
