@@ -8,13 +8,15 @@ Backend para gestión de pedidos, clientes y productos usando las siguentes tecn
 - MongoDB (mongoose)
 - cors
 - uuid
+- Multitenat
 - Postman (pruebas)
 
 ## 🌟 Características
 
-- Operaciones CRUD completas para las entidades: clientes, productos y pedidos.
+- Operaciones **CRUD** completas para las entidades: clientes, productos y pedidos.
 - Verificación de existencia de clientes y productos al crear un pedido, garantizando la integridad de los datos.
-- Gestión detallada de errores y respuestas claras ante situaciones como:
+- **Soporte multi-tenant**: cada entidad incluye un campo `tenantId` que permite gestionar datos de múltiples inquilinos en una misma base de datos, garantizando el aislamiento lógico entre ellos.
+- **Gestión detallada de errores** y respuestas claras ante situaciones como:
   - Falta de información o identificadores inválidos.
   - Errores internos del servidor (500).
   - Solicitudes incorrectas o mal formadas (400).
@@ -44,6 +46,7 @@ npm install
 npm run dev
 ```
 6. Con Postman u otra herramienta, ejecutar los endpoints
+7. ⚠️Recuerda incluir la cabecera `x-tenant-id` en todas las solicitudes a las entidades, para garantizar el correcto funcionamiento del sistema multi-tenant.
 
 ## 📘 Documentacion de la API 
 
@@ -107,10 +110,12 @@ Representa una solicitud de compra realizada por un cliente en la tienda. Contie
 - `DELETE /api/pedidos/:id` - Eliminar pedido
 - `PUT /api/pedidos/:id/cerrar` - Cerrar pedido
 
+⚠️ Importante: Todas las rutas requieren el header `x-tenant-id` para funcionar correctamente. Sin este campo, las operaciones no se ejecutarán. 
+
 ## 🧪 Ejemplos de uso
 
 ### Crear Cliente
-\`\`\`json
+```json
 POST /api/clientes
 {
   "nombre_completo": "Juan Pérez",
@@ -118,20 +123,20 @@ POST /api/clientes
   "email": "juan@email.com",
   "telefono": "70123456"
 }
-\`\`\`
+```
 
 ### Crear Producto
-\`\`\`json
+```json
 POST /api/productos
 {
   "nombre": "Laptop HP",
   "marca": "HP",
   "precio": 1500.00
 }
-\`\`\`
+```
 
 ### Crear Pedido
-\`\`\`json
+```json
 POST /api/pedidos
 {
   "cliente_id": "uuid-del-cliente",
@@ -142,7 +147,7 @@ POST /api/pedidos
     }
   ]
 }
- 
+ ```
  
 ## 🤝 Contribución
 
@@ -158,10 +163,10 @@ Este proyecto está bajo la MIT License, para más detalles sobre los términos 
 
 | Recurso      | Direccion                            |
 |--------------|---------------------------------------------------------------------------------------------------|
-|📧 Email     |[favian.medina.gemio@gmail.com](favian.medina.gemio@gmail.com) |
-|💻 GitHub    |[https://github.com/fabinnerself](https://github.com/fabinnerself) |
+|📧 Email     |[favian.medina.gemio@gmail.com](favian.medina.gemio@gmail.com)                                      |
+|💻 GitHub    |[https://github.com/fabinnerself](https://github.com/fabinnerself)                       |
 |🧠 LinkedIn  |[https://www.linkedin.com/in/favian-medina-gemio/](https://www.linkedin.com/in/favian-medina-gemio/)|
-|💼 Portafolio| [https://favian-medina-cv.vercel.app/](https://favian-medina-cv.vercel.app/)|
+|💼 Portafolio|[https://favian-medina-cv.vercel.app/](https://favian-medina-cv.vercel.app/)|
  
 
 (c) 2025
