@@ -17,8 +17,7 @@ app.use(express.json())
 
 // Conexión a MongoDB
 mongoose
-  //.connect(process.env.MONGODB_URI, {
-    .connect("mongodb+srv://favianmedinagemio:frxJ4XBUlplV9uJk@cluster0.0tyxhhf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/tienda_db", {
+  .connect(process.env.MONGODB_URI, {    
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
