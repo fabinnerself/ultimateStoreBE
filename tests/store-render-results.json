@@ -1,0 +1,573 @@
+{
+	"id": "667f5bbf-4df9-4812-8c1e-ee5b15470e82",
+	"name": "TiendaBackEnd",
+	"timestamp": "2025-09-04T01:49:36.490Z",
+	"collection_id": "22674808-75c5d8cf-e949-45b3-9cf3-547bbd1015b6",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 21,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-09-04T01:49:25.987Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ba963b85-169a-4793-a9e4-3d88eb7366f1",
+			"name": "health",
+			"url": "https://ultimatestorebe.onrender.com/health",
+			"time": 658,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Message should be 'true'": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be 'true'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				658
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Message should be 'true'": true
+				}
+			]
+		},
+		{
+			"id": "67a1eb37-513a-4184-b5b1-8401377628db",
+			"name": "listar",
+			"url": "https://ultimatestorebe.onrender.com/api/clientes",
+			"time": 421,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				421
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e2661415-4639-4825-9f7f-f8f164d23bb7",
+			"name": "adicionar",
+			"url": "https://ultimatestorebe.onrender.com/api/clientes",
+			"time": 642,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Ensure Response should have saved correctly": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure Response should have saved correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				642
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Ensure Response should have saved correctly": true
+				}
+			]
+		},
+		{
+			"id": "f61292d9-3ce6-4fbd-a804-ef664fd62a98",
+			"name": "listarUno",
+			"url": "https://ultimatestorebe.onrender.com/api/clientes/5c6e0cf2-1847-4783-9075-aff6ebb5ec57",
+			"time": 420,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				420
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "7f558f5a-29bd-4040-9877-c4de9cbdb419",
+			"name": "modificar",
+			"url": "https://ultimatestorebe.onrender.com/api/clientes/5c6e0cf2-1847-4783-9075-aff6ebb5ec57",
+			"time": 399,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				399
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "82f965e8-454e-40b9-a44c-c9c9d081226b",
+			"name": "delete",
+			"url": "https://ultimatestorebe.onrender.com/api/clientes/5c6e0cf2-1847-4783-9075-aff6ebb5ec57",
+			"time": 426,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				426
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "7c05ecc6-4b70-4bae-bc59-275eba12324d",
+			"name": "listar",
+			"url": "https://ultimatestorebe.onrender.com/api/productos",
+			"time": 454,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				454
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "22c6e419-8e2d-48fa-a83a-4156b0d1a13b",
+			"name": "adicionar",
+			"url": "https://ultimatestorebe.onrender.com/api/productos",
+			"time": 448,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Ensure Response should have saved correctly": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure Response should have saved correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				448
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Ensure Response should have saved correctly": true
+				}
+			]
+		},
+		{
+			"id": "ede65e6f-6008-4624-9f10-2a5e0d8793fb",
+			"name": "listarUno",
+			"url": "https://ultimatestorebe.onrender.com/api/productos/e19f5928-b2ca-4fc0-bc59-8fbb2622e224",
+			"time": 427,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				427
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2d5d9c19-b936-4201-885d-298a98553ae1",
+			"name": "modificar",
+			"url": "https://ultimatestorebe.onrender.com/api/productos/e19f5928-b2ca-4fc0-bc59-8fbb2622e224",
+			"time": 408,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				408
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b69d75d3-4871-4b79-8a3f-ea5fe24b03af",
+			"name": "eliminar",
+			"url": "https://ultimatestorebe.onrender.com/api/productos/e19f5928-b2ca-4fc0-bc59-8fbb2622e224",
+			"time": 397,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				397
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "37ec90b5-b832-426a-9a55-322a0bb57167",
+			"name": "listarPedido",
+			"url": "https://ultimatestorebe.onrender.com/api/pedidos?x-tenant-id=tenant_abc123",
+			"time": 573,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				573
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b986c524-9b98-4225-97e6-f280eb3b2668",
+			"name": "adicionarPedido",
+			"url": "https://ultimatestorebe.onrender.com/api/pedidos",
+			"time": 784,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Ensure Response should have saved correctly": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure Response should have saved correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				784
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Ensure Response should have saved correctly": true
+				}
+			]
+		},
+		{
+			"id": "b3091aaf-11a1-4d9c-a5e4-ebc0c86345e1",
+			"name": "listarUnPedido",
+			"url": "https://ultimatestorebe.onrender.com/api/pedidos/a9330605-fcd1-452b-8b0d-f07c95f2cfc2",
+			"time": 579,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				579
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "bd45338c-b556-4393-8da2-3bd90b0c7152",
+			"name": "modificarPedido",
+			"url": "https://ultimatestorebe.onrender.com/api/pedidos/a9330605-fcd1-452b-8b0d-f07c95f2cfc2",
+			"time": 749,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				749
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a5d806b6-1c28-47ab-a80b-be47b49ba3fc",
+			"name": "CerrarPedido",
+			"url": "https://ultimatestorebe.onrender.com/api/pedidos/a9330605-fcd1-452b-8b0d-f07c95f2cfc2/cerrar",
+			"time": 616,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				616
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "9cbae3bc-1afa-4152-b218-867cb7968b67",
+			"name": "EliminarPedido",
+			"url": "https://ultimatestorebe.onrender.com/api/pedidos/a9330605-fcd1-452b-8b0d-f07c95f2cfc2",
+			"time": 394,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				394
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 8795,
+	"collection": {
+		"requests": [
+			{
+				"id": "ba963b85-169a-4793-a9e4-3d88eb7366f1",
+				"method": "GET"
+			},
+			{
+				"id": "67a1eb37-513a-4184-b5b1-8401377628db",
+				"method": "GET"
+			},
+			{
+				"id": "e2661415-4639-4825-9f7f-f8f164d23bb7",
+				"method": "POST"
+			},
+			{
+				"id": "f61292d9-3ce6-4fbd-a804-ef664fd62a98",
+				"method": "GET"
+			},
+			{
+				"id": "7f558f5a-29bd-4040-9877-c4de9cbdb419",
+				"method": "PUT"
+			},
+			{
+				"id": "82f965e8-454e-40b9-a44c-c9c9d081226b",
+				"method": "DELETE"
+			},
+			{
+				"id": "7c05ecc6-4b70-4bae-bc59-275eba12324d",
+				"method": "GET"
+			},
+			{
+				"id": "22c6e419-8e2d-48fa-a83a-4156b0d1a13b",
+				"method": "POST"
+			},
+			{
+				"id": "ede65e6f-6008-4624-9f10-2a5e0d8793fb",
+				"method": "GET"
+			},
+			{
+				"id": "2d5d9c19-b936-4201-885d-298a98553ae1",
+				"method": "PUT"
+			},
+			{
+				"id": "b69d75d3-4871-4b79-8a3f-ea5fe24b03af",
+				"method": "DELETE"
+			},
+			{
+				"id": "37ec90b5-b832-426a-9a55-322a0bb57167",
+				"method": "GET"
+			},
+			{
+				"id": "b986c524-9b98-4225-97e6-f280eb3b2668",
+				"method": "POST"
+			},
+			{
+				"id": "b3091aaf-11a1-4d9c-a5e4-ebc0c86345e1",
+				"method": "GET"
+			},
+			{
+				"id": "bd45338c-b556-4393-8da2-3bd90b0c7152",
+				"method": "PUT"
+			},
+			{
+				"id": "a5d806b6-1c28-47ab-a80b-be47b49ba3fc",
+				"method": "PUT"
+			},
+			{
+				"id": "9cbae3bc-1afa-4152-b218-867cb7968b67",
+				"method": "DELETE"
+			}
+		]
+	}
+}

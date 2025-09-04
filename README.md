@@ -11,6 +11,10 @@ Backend para gestión de pedidos, clientes y productos usando las siguentes tecn
 - Multitenat
 - Postman (pruebas)
 
+#🔗 Rutas Está disponible el siguiente recurso:
+
+https://ultimatestorebe.onrender.com/api/clientes 
+
 ## 🌟 Características
 
 - Operaciones **CRUD** completas para las entidades: clientes, productos y pedidos.
