@@ -1,0 +1,34 @@
+# Dependencias y caches
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Entornos locales / secretos
+.env
+.env.*
+.env-*
+!.env.template
+
+# VCS y configuraciones locales
+.git
+.gitignore
+.github
+.vscode
+
+# Archivos de Docker/Compose (no se necesitan dentro de la imagen)
+Dockerfile
+docker-compose.yml
+render.yaml
+
+# SO / temporales
+.DS_Store
+Thumbs.db
+
+# Cobertura / compilados / artefactos
+coverage
+build
+dist
+.tmp
+*.swp

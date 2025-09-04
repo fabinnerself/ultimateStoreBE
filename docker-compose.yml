@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  keymaster-api:
+    build: .
+    image: keymaster-api:latest
+    container_name: keymaster-api-container
+    ports:
+      - "8000:8000"
+    environment:
+      # The app reads PORT and MONGODB_URI in server.js
+      PORT: "8000"
+      # Replace with your connection string or use an .env file with variable expansion
+      MONGODB_URI: "mongodb://localhost:27017/ultimate_store"
+    # Uncomment if you want the container to restart automatically
+    # restart: unless-stopped

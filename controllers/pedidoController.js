@@ -33,6 +33,7 @@ exports.listarPedidos = async (req, res) => {
 // Obtener pedido por ID
 exports.obtenerPedido = async (req, res) => {
   try {
+    const tenantId = getTenantId(req);
 
     const pedido = await Pedido.findOne({ id: req.params.id, tenantId })
     if (!pedido) {
@@ -104,7 +105,8 @@ exports.crearPedido = async (req, res) => {
 exports.actualizarPedido = async (req, res) => {
   try {
     const { productos, estado } = req.body
-    const pedido = await Pedido.findOne({ id: req.params.id })
+    const tenantId = getTenantId(req);
+    const pedido = await Pedido.findOne({ id: req.params.id, tenantId })
 
     if (!pedido) {
       return res.status(404).json({ error: "Pedido no encontrado" })
@@ -150,7 +152,8 @@ exports.cerrarPedido = async (req, res) => {
   try {
 
     const { productos, estado } = req.body
-    const pedido = await Pedido.findOne({ id: req.params.id })
+    const tenantId = getTenantId(req);
+    const pedido = await Pedido.findOne({ id: req.params.id, tenantId })
 
     if (!pedido) {
       return res.status(404).json({ error: "Pedido no encontrado" })
@@ -172,7 +175,8 @@ exports.eliminarPedido = async (req, res) => {
   try {
  
 
-    const pedido = await Pedido.findOneAndDelete({ id: req.params.id })
+    const tenantId = getTenantId(req);
+    const pedido = await Pedido.findOneAndDelete({ id: req.params.id, tenantId })
     if (!pedido) {
       return res.status(404).json({ error: "Pedido no encontrado" })
     }

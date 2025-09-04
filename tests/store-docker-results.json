@@ -1,0 +1,573 @@
+{
+	"id": "fffcc796-fd4b-40d0-814e-edaff4d8f7b8",
+	"name": "TiendaBackEnd",
+	"timestamp": "2025-09-04T01:36:32.938Z",
+	"collection_id": "22674808-75c5d8cf-e949-45b3-9cf3-547bbd1015b6",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 21,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-09-04T01:36:28.336Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ba963b85-169a-4793-a9e4-3d88eb7366f1",
+			"name": "health",
+			"url": "http://localhost:8000/health",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Message should be 'true'": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be 'true'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Message should be 'true'": true
+				}
+			]
+		},
+		{
+			"id": "67a1eb37-513a-4184-b5b1-8401377628db",
+			"name": "listar",
+			"url": "http://localhost:8000/api/clientes",
+			"time": 185,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				185
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e2661415-4639-4825-9f7f-f8f164d23bb7",
+			"name": "adicionar",
+			"url": "http://localhost:8000/api/clientes",
+			"time": 133,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Ensure Response should have saved correctly": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure Response should have saved correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				133
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Ensure Response should have saved correctly": true
+				}
+			]
+		},
+		{
+			"id": "f61292d9-3ce6-4fbd-a804-ef664fd62a98",
+			"name": "listarUno",
+			"url": "http://localhost:8000/api/clientes/8e66ad09-a7b7-493c-978e-fb602499b818",
+			"time": 112,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				112
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "7f558f5a-29bd-4040-9877-c4de9cbdb419",
+			"name": "modificar",
+			"url": "http://localhost:8000/api/clientes/8e66ad09-a7b7-493c-978e-fb602499b818",
+			"time": 122,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				122
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "82f965e8-454e-40b9-a44c-c9c9d081226b",
+			"name": "delete",
+			"url": "http://localhost:8000/api/clientes/8e66ad09-a7b7-493c-978e-fb602499b818",
+			"time": 118,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				118
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "7c05ecc6-4b70-4bae-bc59-275eba12324d",
+			"name": "listar",
+			"url": "http://localhost:8000/api/productos",
+			"time": 114,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				114
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "22c6e419-8e2d-48fa-a83a-4156b0d1a13b",
+			"name": "adicionar",
+			"url": "http://localhost:8000/api/productos",
+			"time": 123,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Ensure Response should have saved correctly": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure Response should have saved correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				123
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Ensure Response should have saved correctly": true
+				}
+			]
+		},
+		{
+			"id": "ede65e6f-6008-4624-9f10-2a5e0d8793fb",
+			"name": "listarUno",
+			"url": "http://localhost:8000/api/productos/ce712d73-d2c6-40cf-84ab-d75a4ab3ba35",
+			"time": 117,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				117
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2d5d9c19-b936-4201-885d-298a98553ae1",
+			"name": "modificar",
+			"url": "http://localhost:8000/api/productos/ce712d73-d2c6-40cf-84ab-d75a4ab3ba35",
+			"time": 119,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				119
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b69d75d3-4871-4b79-8a3f-ea5fe24b03af",
+			"name": "eliminar",
+			"url": "http://localhost:8000/api/productos/ce712d73-d2c6-40cf-84ab-d75a4ab3ba35",
+			"time": 123,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				123
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "37ec90b5-b832-426a-9a55-322a0bb57167",
+			"name": "listarPedido",
+			"url": "http://localhost:8000/api/pedidos?x-tenant-id=tenant_abc123",
+			"time": 227,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				227
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b986c524-9b98-4225-97e6-f280eb3b2668",
+			"name": "adicionarPedido",
+			"url": "http://localhost:8000/api/pedidos",
+			"time": 337,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Ensure Response should have saved correctly": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure Response should have saved correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				337
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Ensure Response should have saved correctly": true
+				}
+			]
+		},
+		{
+			"id": "b3091aaf-11a1-4d9c-a5e4-ebc0c86345e1",
+			"name": "listarUnPedido",
+			"url": "http://localhost:8000/api/pedidos/e2690a9a-5b31-4d95-bc69-830b67b75292",
+			"time": 225,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				225
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "bd45338c-b556-4393-8da2-3bd90b0c7152",
+			"name": "modificarPedido",
+			"url": "http://localhost:8000/api/pedidos/e2690a9a-5b31-4d95-bc69-830b67b75292",
+			"time": 347,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				347
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a5d806b6-1c28-47ab-a80b-be47b49ba3fc",
+			"name": "CerrarPedido",
+			"url": "http://localhost:8000/api/pedidos/e2690a9a-5b31-4d95-bc69-830b67b75292/cerrar",
+			"time": 231,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				231
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "9cbae3bc-1afa-4152-b218-867cb7968b67",
+			"name": "EliminarPedido",
+			"url": "http://localhost:8000/api/pedidos/e2690a9a-5b31-4d95-bc69-830b67b75292",
+			"time": 116,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				116
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2773,
+	"collection": {
+		"requests": [
+			{
+				"id": "ba963b85-169a-4793-a9e4-3d88eb7366f1",
+				"method": "GET"
+			},
+			{
+				"id": "67a1eb37-513a-4184-b5b1-8401377628db",
+				"method": "GET"
+			},
+			{
+				"id": "e2661415-4639-4825-9f7f-f8f164d23bb7",
+				"method": "POST"
+			},
+			{
+				"id": "f61292d9-3ce6-4fbd-a804-ef664fd62a98",
+				"method": "GET"
+			},
+			{
+				"id": "7f558f5a-29bd-4040-9877-c4de9cbdb419",
+				"method": "PUT"
+			},
+			{
+				"id": "82f965e8-454e-40b9-a44c-c9c9d081226b",
+				"method": "DELETE"
+			},
+			{
+				"id": "7c05ecc6-4b70-4bae-bc59-275eba12324d",
+				"method": "GET"
+			},
+			{
+				"id": "22c6e419-8e2d-48fa-a83a-4156b0d1a13b",
+				"method": "POST"
+			},
+			{
+				"id": "ede65e6f-6008-4624-9f10-2a5e0d8793fb",
+				"method": "GET"
+			},
+			{
+				"id": "2d5d9c19-b936-4201-885d-298a98553ae1",
+				"method": "PUT"
+			},
+			{
+				"id": "b69d75d3-4871-4b79-8a3f-ea5fe24b03af",
+				"method": "DELETE"
+			},
+			{
+				"id": "37ec90b5-b832-426a-9a55-322a0bb57167",
+				"method": "GET"
+			},
+			{
+				"id": "b986c524-9b98-4225-97e6-f280eb3b2668",
+				"method": "POST"
+			},
+			{
+				"id": "b3091aaf-11a1-4d9c-a5e4-ebc0c86345e1",
+				"method": "GET"
+			},
+			{
+				"id": "bd45338c-b556-4393-8da2-3bd90b0c7152",
+				"method": "PUT"
+			},
+			{
+				"id": "a5d806b6-1c28-47ab-a80b-be47b49ba3fc",
+				"method": "PUT"
+			},
+			{
+				"id": "9cbae3bc-1afa-4152-b218-867cb7968b67",
+				"method": "DELETE"
+			}
+		]
+	}
+}

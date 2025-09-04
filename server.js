@@ -34,6 +34,10 @@ app.get("/", (req, res) => {
   res.json({ message: "API funcionando correctamente" })
 })
 
+app.get("/health", (req, res) => {
+  res.json({ success:true,message: "API store ok" })
+})
+
 // Middleware de manejo de errores
 app.use((err, req, res, next) => {
   console.error(err.stack)
